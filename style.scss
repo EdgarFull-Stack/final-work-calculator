@@ -1,0 +1,84 @@
+$gradient-bg: linear-gradient(to right, #00c6ff, #00ffab);
+$display-bg: #002d27;
+$button-bg: #eafdfd;
+$button-text-color: #000;
+$operator-bg: #80e8e8;
+$special-bg: #f77;
+$display-text-color: #fff;
+$font-size-display: 2rem;
+$font-size-buttons: 1.5rem;
+$border-radius: 5px;
+$gap: 10px;
+
+.calculator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: $gradient-bg;
+  height: 100vh;
+  box-sizing: border-box;
+
+  .display {
+    background: $display-bg;
+    color: $display-text-color;
+    font-size: $font-size-display;
+    text-align: right;
+    padding: 20px;
+    width: 100%;
+    max-width: 250px;
+    border-radius: $border-radius;
+    margin-bottom: $gap;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: $gap;
+    width: 100%;
+    max-width: 250px;
+    background: white;
+    padding: 20px;
+    #clear {
+      grid-column: span 2;
+    }
+    #equals {
+      grid-column: span 2;
+    }
+    .btn {
+      background: $button-bg;
+      color: $button-text-color;
+      font-size: $font-size-buttons;
+      padding: 15px;
+      border: none;
+      border-radius: $border-radius;
+      cursor: pointer;
+      text-align: center;
+      box-shadow: inset 0 -2px 4px rgba(0, 0, 0, 0.1);
+      transition: all 0.1s ease;
+      &:hover {
+        transform: scale(1.05);
+        box-shadow: inset 0 -3px 6px rgba(0, 0, 0, 0.2);
+      }
+
+      &.number {
+        background: lighten($button-bg, 10%);
+      }
+
+      &.operator {
+        background: $operator-bg;
+      }
+
+      &#clear {
+        background: $special-bg;
+        color: #fff;
+      }
+
+      &#equals {
+        background: darken($operator-bg, 10%);
+        color: #fff;
+      }
+    }
+  }
+}
