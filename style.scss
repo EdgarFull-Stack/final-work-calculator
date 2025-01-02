@@ -74,7 +74,7 @@ body {
 
         &#equals {
           background: darken($operator-bg, 10%);
-          color: #fff;
+          color: $display-bg;
         }
       }
     }
