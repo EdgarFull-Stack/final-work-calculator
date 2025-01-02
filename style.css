@@ -1,44 +1,42 @@
-.calculator {
+body {
+  background: linear-gradient(to right, #00c6ff, #00ffab);
+}
+body .calculator {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(to right, #00c6ff, #00ffab);
-  height: 100vh;
-  box-sizing: border-box;
+  max-width: 250px;
+  margin: 0 auto;
 }
-.calculator .display {
+body .calculator .display {
   background: #002d27;
   color: #fff;
   font-size: 2rem;
   text-align: right;
-  padding: 20px;
+  padding: 15px 5px;
   width: 100%;
-  max-width: 250px;
   border-radius: 5px;
-  margin-bottom: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-.calculator .buttons {
+body .calculator .buttons {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
+  gap: 5px;
   width: 100%;
-  max-width: 250px;
-  background: white;
-  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  padding: 5px;
 }
-.calculator .buttons #clear {
+body .calculator .buttons #clear {
   grid-column: span 2;
 }
-.calculator .buttons #equals {
+body .calculator .buttons #equals {
   grid-column: span 2;
 }
-.calculator .buttons .btn {
+body .calculator .buttons .btn {
   background: #eafdfd;
   color: #000;
   font-size: 1.5rem;
-  padding: 15px;
+  height: 60px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -46,21 +44,21 @@
   box-shadow: inset 0 -2px 4px rgba(0, 0, 0, 0.1);
   transition: all 0.1s ease;
 }
-.calculator .buttons .btn:hover {
+body .calculator .buttons .btn:hover {
   transform: scale(1.05);
   box-shadow: inset 0 -3px 6px rgba(0, 0, 0, 0.2);
 }
-.calculator .buttons .btn.number {
+body .calculator .buttons .btn.number {
   background: white;
 }
-.calculator .buttons .btn.operator {
+body .calculator .buttons .btn.operator {
   background: #80e8e8;
 }
-.calculator .buttons .btn#clear {
+body .calculator .buttons .btn#clear {
   background: #f77;
   color: #fff;
 }
-.calculator .buttons .btn#equals {
+body .calculator .buttons .btn#equals {
   background: #55e0e0;
   color: #fff;
 }/*# sourceMappingURL=style.css.map */
